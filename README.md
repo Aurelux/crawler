@@ -10,7 +10,7 @@ fichier avec le code python du crawler
 
 ### Crawled_webpages.txt
 
-Exemple des 50 sites web scrollés depuis hhtps://ensai.fr
+Exemple des 50 sites web scrollés depuis https://ensai.fr
 
 ### fichier .sqlite
 
