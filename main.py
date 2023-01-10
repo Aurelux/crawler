@@ -63,8 +63,30 @@ def crawl(url, page_limit = 50,delay=2):
                 connection.commit()
     print("crawling done, check crawled_webpages.txt for result") #message s'affichant à la fin du script
 
+#Fonction de test pour tester la fonction crawl
+import unittest
+from unittest.mock import patch
 
+class TestCrawler(unittest.TestCase):
+    @patch('requests.get')
+    def test_visit_page(self, mock_get):
+        # Arrange
+        mock_get.return_value.text = "<html><a href='http://example.com/page1'>Page 1</a></html>"
+        # Act
+        crawl('http://example.com')
+        # Assert
+        cursor.execute("SELECT * FROM pages WHERE url = 'http://example.com/page1'")
+        result = cursor.fetchone()
+        self.assertIsNotNone(result) #on regarde si la bdd n'est pas nulle
 
-# Utilisation de la fonction : on choisit l'url et on lance al fonction
+# Utilisation de la fonction de test
+#il faut enlver les guillemets su l'on souhaite tester le code
+'''
+if __name__ == '__main__':
+    unittest.main()
+'''
+
+    
+# Utilisation de la fonction : on choisit l'url et on lance la fonction
 url = 'https://ensai.fr/'
 crawl(url)
