@@ -1,1 +1,21 @@
-# crawler
+# TP1 - crawler minimal
+
+Bertail Aurélien
+
+## Description du code
+
+Ce code est un crawler single-threaded.
+À partir d'une URL d'entrée unique (ici https://ensai.fr/), le crawler télécharge une page, puis
+attend au moins cinq secondes avant de télécharger la page suivante. Le programme analyse les fichiers robots.twt et sitemap.xml des sites webs téléchargés afin de trouver d'autres url a explorer tout en respectant la politness et en ne crwlant uniquement les sites autorisés.
+
+Le programme se termine lorsque le crawler arrive à 50 urls trouvées ou si il ne trouve
+plus de liens à explorer.
+Une fois terminé, le programme écrit dans un fichier crawled_webpages.txt toutes les urls
+trouvées. Il stocke également l'ensmeble des urls trouvées dans une base de données SQlite.
+
+## Éxécuter le code
+
+Afin d'éxecuter le code, il suffit de lancer le lacer le fichier main.py sur son ordinateur, il faut au préalable installer l'ensemble des packages nécéssaires. Pour changer d'url de départ, il suffit de modifier la varibale "url" a la fin de la page main.py
+
+
+
