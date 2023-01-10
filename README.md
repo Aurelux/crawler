@@ -2,6 +2,20 @@
 
 Bertail Aurélien
 
+## Description des fichiers 
+
+### main.py
+
+fichier avec le code python du crawler
+
+### Crawled_webpages.txt
+
+Exemple des 50 sites web scrollés depuis hhtps://ensai.fr
+
+### fichier .sqlite
+
+Base de données relationelle de l'ensemble des sites web trouvées avec leur age( profondeur)
+
 ## Description du code
 
 Ce code est un crawler single-threaded.
@@ -12,6 +26,7 @@ Le programme se termine lorsque le crawler arrive à 50 urls trouvées ou si il 
 plus de liens à explorer.
 Une fois terminé, le programme écrit dans un fichier crawled_webpages.txt toutes les urls
 trouvées. Il stocke également l'ensmeble des urls trouvées dans une base de données SQlite.
+
 
 ## Éxécuter le code
 
